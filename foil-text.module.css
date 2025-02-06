@@ -1,0 +1,31 @@
+.foilEffect {
+  display: inline-block;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-size: 200% 100%;
+  background-position: 100%;
+  animation: shine 8s infinite linear;
+  color: rgba(0, 0, 0, 0.8);
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+.myProduct {
+  composes: foilEffect;
+  background-image: linear-gradient(45deg, #e6f2ef 0%, #c5e1d6 20%, #a3d0bd 40%, #82bfa4 60%, #60ae8b 80%, #3e9d72 100%);
+}
+
+.competitor {
+  composes: foilEffect;
+  background-image: linear-gradient(45deg, #fff0db 0%, #ffe0b2 20%, #ffcd80 40%, #ffbd45 60%, #ffa000 80%, #ff8f00 100%);
+}
+
+@keyframes shine {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
